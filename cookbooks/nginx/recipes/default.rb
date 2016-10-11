@@ -29,3 +29,6 @@ end
 node['nginx']['default']['modules'].each do |ngx_module|
   include_recipe "nginx::#{ngx_module}"
 end
+
+include_recipe "nginx::ngx_lua_module"
+
